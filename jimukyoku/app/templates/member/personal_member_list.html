@@ -1,0 +1,21 @@
+{% extends 'common/base.html' %}
+{% block title %}
+    個人会員一覧
+{% endblock title %}
+{% block content %}
+    <h1>個人会員一覧</h1>
+    <table>
+        <tr>
+            <th>会員ID</th>
+            <th>フリガナ</th>
+            <th>氏名</th>
+        </tr>
+        {% for member in personal_members %}
+            <tr>
+                <td>{{ member.member_number }}</td>
+                <td>{{ member.name_kana }}</td>
+                <td>{{ member.name_kanji }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

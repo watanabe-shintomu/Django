@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            {% block title %}
+            {% endblock title %}
+            | 支払調書
+        </title>
+        <link rel="stylesheet" href="{% static 'css/common/base.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/lib/svg-paper.css' %}" />
+    </head>
+    <body>
+        {% block content %}
+        {% endblock content %}
+        <script src="{% static 'js/lib/svg-paper.js' %}"></script>
+    </body>
+</html>
